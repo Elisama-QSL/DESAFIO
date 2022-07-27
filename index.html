@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="pt-br"/>
+        <title> Desafio </title>
+    </head>
+    <body>
+         <h1> Cálculo da umidade do solo </h1>
+    </body>
+    <body>
+        <h3>Informe o Tipo de Solo:</h3>
+        <select id="solo">
+            <option value="Argila">Argila</option>
+            <option value="Argilosa" selected>Argilosa</option>
+            <option value="Arenosa">Arenosa</option>
+          </select>
+
+          <h3>Informe o Valor</h3>
+          <input type="number" id="numero" name="valor"></input>
+          <br></br>
+          <button onclick="calcularIrrigacao()"> Calcular Irrigação </button>
+          <c id="cal"></c>
+
+          <script type="text/javascript">
+			function calcularIrrigacao() {
+				var select = document.getElementById('solo').value;
+		        var numero = document.getElementById('numero').value;
+        
+
+            switch (select) {
+                case "Argila":
+                    if(numero > 80){
+                      alert("Irrigação não necessária");
+                      return false;
+                    }  
+                    else if(numero < 60){
+                        alert("Umidade do solo perigosamente baixa");
+                        return false;
+                    }
+                    else{
+                        alert("Irrigação a ser aplicada");
+                        return true;
+                    }
+                    break;
+
+                case "Argilosa":
+                     if(numero > 88){
+                      alert("Irrigação não necessária");
+                      return false;
+                    }  
+                    else if(numero < 70){
+                        alert("Umidade do solo perigosamente baixa");
+                        return false;
+                    }
+                    else{
+                        alert("Irrigação a ser aplicada");
+                        return true;
+                    }
+                    break;
+
+                case "Arenosa":
+                if(numero > 90){
+                      alert("Irrigação não necessária");
+                      return false;
+                    }  
+                    else if(numero < 80){
+                        alert("Umidade do solo perigosamente baixa");
+                        return false;
+                    }
+                    else {
+                        alert("Irrigação a ser aplicada");
+                        return true;
+                    }  
+                    break;
+
+                }      
+             
+           }
+
+
+		</script>
+    </body>
+ 
+   
+</html
